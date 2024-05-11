@@ -20,10 +20,11 @@
          <content>
            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                   <children>
-                     <TextField layoutX="14.0" layoutY="100.0" prefHeight="50.0" prefWidth="200.0" />
-                     <TextField layoutX="14.0" layoutY="195.0" prefHeight="50.0" prefWidth="200.0" />
+                     <TextField fx:id="UserInputLogIn" layoutX="14.0" layoutY="100.0" prefHeight="33.0" prefWidth="200.0" />
+                     <TextField fx:id="PasswordInputLogIn" layoutX="14.0" layoutY="195.0" prefHeight="33.0" prefWidth="200.0" />
                      <Text layoutX="14.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User" wrappingWidth="27.09635353088379" />
                      <Text layoutX="14.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+                      <Button layoutX="403.0" layoutY="397.0" onAction="#onEnterLogIn" prefHeight="28.0" prefWidth="54.0" text="Enter" />
                   </children>
                </AnchorPane>
          </content>
@@ -32,8 +33,8 @@
          <content>
            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                   <children>
-                     <TextField layoutX="14.0" layoutY="98.0" prefHeight="50.0" prefWidth="200.0" />
-                     <TextField layoutX="14.0" layoutY="204.0" prefHeight="50.0" prefWidth="200.0" />
+                     <TextField layoutX="14.0" layoutY="98.0" prefHeight="33.0" prefWidth="200.0" />
+                     <TextField layoutX="14.0" layoutY="204.0" prefHeight="33.0" prefWidth="200.0" />
                      <Text layoutX="14.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User" />
                      <Text layoutX="14.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
                   </children>
@@ -44,5 +45,4 @@
    </TabPane>
 
     <Label fx:id="welcomeText" />
-    <Button onAction="#onHelloButtonClick" prefHeight="63.0" prefWidth="54.0" text="Enter" />
 </VBox>
