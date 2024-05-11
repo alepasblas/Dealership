@@ -29,14 +29,15 @@
                </AnchorPane>
          </content>
        </Tab>
-       <Tab text="Log In">
+       <Tab text="Register">
          <content>
            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                   <children>
-                     <TextField layoutX="14.0" layoutY="98.0" prefHeight="33.0" prefWidth="200.0" />
-                     <TextField layoutX="14.0" layoutY="204.0" prefHeight="33.0" prefWidth="200.0" />
+                     <TextField fx:id="UserRegister" layoutX="14.0" layoutY="98.0" prefHeight="33.0" prefWidth="200.0" />
+                     <TextField fx:id="PasswordRegister" layoutX="14.0" layoutY="204.0" prefHeight="33.0" prefWidth="200.0" />
                      <Text layoutX="14.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User" />
                      <Text layoutX="14.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+                     <Button layoutX="400.0" layoutY="386.0" mnemonicParsing="false" onAction="#onEnterRegister" text="Register" />
                   </children>
                </AnchorPane>
          </content>

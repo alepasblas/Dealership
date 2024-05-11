@@ -3,13 +3,14 @@
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dealership.ControllerOfPagPrinc">
    <children>
       <Accordion>
         <panes>
@@ -23,10 +24,14 @@
                            </font>
                         </Text>
                         <TextArea layoutX="12.0" layoutY="68.0" prefHeight="33.0" prefWidth="875.0" />
-                        <ImageView fitHeight="184.0" fitWidth="264.0" layoutX="12.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" />
-                        <ImageView fitHeight="184.0" fitWidth="264.0" layoutX="334.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" />
-                        <ImageView fitHeight="184.0" fitWidth="264.0" layoutX="611.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true" />
-                        <Text layoutX="14.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aqui imagenes con enlaces a otra pagina, con la info de esa moto ..." />
+                        <ImageView fx:id="gasgas" fitHeight="240.0" fitWidth="433.0" layoutX="48.0" layoutY="115.0" onMouseClicked="#onGasgasClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/gasgasMC450.jpg" />
+                           </image></ImageView>
+                        <ImageView fitHeight="240.0" fitWidth="433.0" layoutX="423.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/yamaha450.jpeg" />
+                           </image></ImageView>
                         <Text layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hacer funcional la busqueda" />
                      </children>
                   </AnchorPane>
@@ -41,7 +46,16 @@
                               <Font name="Dubai Medium" size="32.0" />
                            </font>
                         </Text>
-                        <Text layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mas imagenes..." />
+                        <ImageView fitHeight="240.0" fitWidth="433.0" layoutX="106.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/bujia.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="240.0" fitWidth="433.0" layoutX="481.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/piston4t.jpg" />
+                           </image>
+                        </ImageView>
                      </children>
                   </AnchorPane>
             </content>
@@ -57,7 +71,16 @@
                         </Text>
                         <Text layoutX="14.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We are a familiar dealership that we are in this job since 1967, we sell all types of motorcycles, motocross, road, mixed..." wrappingWidth="869.13671875" />
                         <Text layoutX="13.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We are a dealer from bikers to bikers, we invite to you to check our app, and if you like some one, pick it and have fun!" wrappingWidth="872.13671875" />
-                        <Text layoutX="14.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alguna imagen...." />
+                        <ImageView fitHeight="274.0" fitWidth="272.0" layoutX="140.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/concesionario.jpeg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="272.0" fitWidth="401.0" layoutX="484.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/conce2.jpeg" />
+                           </image>
+                        </ImageView>
                      </children>
                   </AnchorPane>
             </content>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane layoutX="2.0" layoutY="-1.0" prefHeight="600.0" prefWidth="900.0">
+         <content>
+            <AnchorPane prefHeight="612.0" prefWidth="900.0">
+               <children>
+                  <!-- Aquí están todos los demás nodos -->
+                  <ImageView fitHeight="263.0" fitWidth="396.0" layoutX="258.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/gasgasMC450.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="348.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GasGas MC 450" textAlignment="CENTER">
+                     <font>
+                        <Font name="Dubai Medium" size="31.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="69.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Specifications:">
+                     <font>
+                        <Font name="Dubai Light" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="69.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Favoring only the brave, the MC 450F delivers some serious performance! But with plenty of high-level electronic wizardry, the power is put to the ground in such a controllable way that'll you be going fast without even realizing. Complete with new, even less restrictive ergonomics, and with WP Suspension and an agile chassis that ensures precise handling, it's a big bike that's super-fun and super-easy to ride." wrappingWidth="695.0" />
+                  <Text layoutX="69.0" layoutY="579.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRANSMISSION: 5-speed, BATTERY CAPACITY: 2 Ah, COOLING: Liquid cooled, STARTER: Electric starter" wrappingWidth="695.0" />
+                  <Text layoutX="69.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Engine:">
+                     <font>
+                        <Font name="Dubai Light" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="69.0" layoutY="614.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chassis:">
+                     <font>
+                        <Font name="Dubai Light" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="69.0" layoutY="642.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WEIGHT (WITHOUT FUEL): 103.3 kg, TANK CAPACITY (APPROX.): 7.9 l, WHEELBASE: 1493 mm, FRONT BRAKE DISC DIAMETER: 260 mm" wrappingWidth="695.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

@@ -9,8 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-import java.io.StringReader;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
@@ -19,6 +18,8 @@ import java.util.Objects;
 public class Controller {
     public TextField UserInputLogIn;
     public TextField PasswordInputLogIn;
+    public TextField UserRegister;
+    public TextField PasswordRegister;
     @FXML
     private Label welcomeText;
 
@@ -36,15 +37,12 @@ public class Controller {
             {
                 if(Objects.equals(users.get(i), user) && Objects.equals(passwords.get(i), password))
                 {
-                    // Cargar el archivo FXML de la nueva escena
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("paginaPrincipal.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("princPage.fxml"));
                     Parent root = loader.load();
 
 
-                    // Obtener el Stage actual
                     Stage stage = (Stage) welcomeText.getScene().getWindow();
 
-                    // Establecer la nueva escena en el Stage
                     Scene scene = new Scene(root);
                     stage.setScene(scene);
                     stage.show();
@@ -57,6 +55,35 @@ public class Controller {
 
         } catch (IOException e) {
             e.printStackTrace(); // Manejar cualquier error de carga de FXML
+        }
+    }
+
+    public void onEnterRegister(ActionEvent actionEvent)
+    {
+        try {
+            String user = UserRegister.getText();
+            String password= PasswordRegister.getText();
+
+            FileWriter users = new FileWriter("src/main/resources/Users.txt", true);
+
+            BufferedWriter usersU = new BufferedWriter(users);
+
+            usersU.write("\n"+user );
+
+            usersU.close();
+
+            FileWriter passwords = new FileWriter("src/main/resources/Passwords.txt", true);
+
+            BufferedWriter passwordsB = new BufferedWriter(passwords);
+
+            passwordsB.write("\n"+password);
+
+            passwordsB.close();
+
+            System.out.println("New user created");
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
