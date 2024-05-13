@@ -30,8 +30,8 @@ public class Controller {
         try {
             String user = UserInputLogIn.getText();
             String password= PasswordInputLogIn.getText();
-            List<String> users= Files.readAllLines(Path.of("src/main/resources/Users.txt"));
-            List<String> passwords= Files.readAllLines(Path.of("src/main/resources/Passwords.txt"));
+            List<String> users= Files.readAllLines(Path.of("src/main/resources/Files/Users.txt"));
+            List<String> passwords= Files.readAllLines(Path.of("src/main/resources/Files/Passwords.txt"));
 
             for(int i=0; i< users.size(); i++)
             {
@@ -64,7 +64,7 @@ public class Controller {
             String user = UserRegister.getText();
             String password= PasswordRegister.getText();
 
-            FileWriter users = new FileWriter("src/main/resources/Users.txt", true);
+            FileWriter users = new FileWriter("src/main/resources/File/Users.txt", true);
 
             BufferedWriter usersU = new BufferedWriter(users);
 
@@ -72,7 +72,7 @@ public class Controller {
 
             usersU.close();
 
-            FileWriter passwords = new FileWriter("src/main/resources/Passwords.txt", true);
+            FileWriter passwords = new FileWriter("src/main/resources/Files/Passwords.txt", true);
 
             BufferedWriter passwordsB = new BufferedWriter(passwords);
 
