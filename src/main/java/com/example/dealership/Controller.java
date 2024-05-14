@@ -47,10 +47,7 @@ public class Controller {
                     stage.setScene(scene);
                     stage.show();
                 }
-                else
-                {
-                    System.out.println("User or password incorrect");
-                }
+
             }
 
         } catch (IOException e) {
@@ -86,4 +83,6 @@ public class Controller {
             e.printStackTrace();
         }
     }
+
+
 }

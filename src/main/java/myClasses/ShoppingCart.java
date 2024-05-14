@@ -41,6 +41,7 @@ public class ShoppingCart {
      * @return true if the piece is successfully removed from the cart, false otherwise.
      */
     public static boolean RemoveOnePiece(Pieces pieces) {
+
         myPieces.remove(pieces);
         return true;
     }
