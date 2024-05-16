@@ -6,6 +6,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import myClasses.Motorcycle;
+import myClasses.Pieces;
+import myClasses.ShoppingCart;
 
 import java.io.IOException;
 
@@ -26,6 +29,8 @@ public class ControllerGasGas {
     }
 
     public void onAddClicked(ActionEvent actionEvent) throws IOException {
+        ShoppingCart.AddOneMoto(new Motorcycle("GasGas","MC450", "This is a motocross bike", 12000, "4t Motorbike, very nice"));
+/*
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ShoppingCart.fxml"));
         Parent root = loader.load();
 
@@ -34,6 +39,6 @@ public class ControllerGasGas {
         Scene scene = new Scene(root);
 
         stage.setScene(scene);
-        stage.show();
+        stage.show();*/
     }
 }

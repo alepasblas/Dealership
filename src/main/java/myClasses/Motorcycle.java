@@ -24,6 +24,10 @@ public class Motorcycle extends Vehicle {
         this.pieces = pieces;
     }
 
+    public Motorcycle(String name, String model, String info, double price, String specification) {
+        super(name, model, info, price);
+        this.specification = specification;
+    }
     /**
      * Retrieves the specification of the motorcycle.
      *

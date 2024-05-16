@@ -16,22 +16,18 @@ public class ShoppingCart {
      * Adds a piece to the shopping cart.
      *
      * @param pieces The piece to add to the cart.
-     * @return true if the piece is successfully added to the cart, false otherwise.
      */
-    public static boolean AddOnePiece(Pieces pieces) {
+    public static void AddOnePiece(Pieces pieces) {
         myPieces.add(pieces);
-        return true;
     }
 
     /**
      * Adds a motorcycle to the shopping cart.
      *
      * @param motorcycle The motorcycle to add to the cart.
-     * @return true if the motorcycle is successfully added to the cart, false otherwise.
      */
-    public static boolean AddOneMoto(Motorcycle motorcycle) {
+    public static void AddOneMoto(Motorcycle motorcycle) {
         myBikes.add(motorcycle);
-        return true;
     }
 
     /**
@@ -61,11 +57,17 @@ public class ShoppingCart {
      * Displays all items in the shopping cart.
      * Prints out all motorcycles and pieces currently in the cart.
      */
-    public void SeeAll() {
+    public static String SeeAllBikes() {
+        String bikes="";
         System.out.println("My bikes:");
         for (Motorcycle myBike : myBikes) {
-            System.out.println(myBike);
+            bikes+=myBike+", ";
         }
+
+        return bikes;
+    }
+
+    public static void SeeAllPieces(){
         System.out.println("My pieces");
         for (Pieces myPiece : myPieces) {
             System.out.println(myPiece);

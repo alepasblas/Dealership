@@ -1,5 +1,6 @@
 package com.example.dealership;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -15,6 +16,18 @@ public class ControllerOfPagPrinc {
     public void onGasgasClicked(MouseEvent mouseEvent) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("GasGas.fxml"));
+        Parent root = loader.load();
+
+        Stage stage = (Stage) gasgas.getScene().getWindow();
+
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void onShoppingCart(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ShoppingCart.fxml"));
         Parent root = loader.load();
 
         Stage stage = (Stage) gasgas.getScene().getWindow();
