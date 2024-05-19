@@ -24,13 +24,12 @@
                </font>
             </Button>
             <Text layoutX="187.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total: " />
-            <Text layoutX="19.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1--------------------------------------------12.000" wrappingWidth="254.13665771484375" />
-            <Text layoutX="19.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4-----------------------------------------------230" wrappingWidth="254.13665771484375" />
-            <Text layoutX="228.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12.230 €" />
             <Text layoutX="19.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Products" />
             <Text layoutX="21.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery" />
-            <Text layoutX="19.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="---------------------------------------------------0" wrappingWidth="254.13665771484375" />
+            <Text layoutX="19.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-----------------------------------------------------------------0" wrappingWidth="254.13665771484375" />
             <Line endX="25.89288330078125" layoutX="272.0" layoutY="415.0" startX="-272.0" />
+            <Label fx:id="price" alignment="TOP_RIGHT" layoutX="30.0" layoutY="169.0" prefHeight="121.0" prefWidth="254.0" textAlignment="JUSTIFY" />
+            <Label fx:id="totalPrice" layoutX="224.0" layoutY="429.0" prefHeight="18.0" prefWidth="54.0" />
          </children>
       </AnchorPane>
       <Line endX="100.0" layoutX="506.0" layoutY="170.0" startX="-506.0" startY="-1.52587890625E-5" />
@@ -44,7 +43,8 @@
          </image>
       </ImageView>
       <Button fx:id="continueShopping" layoutX="244.0" layoutY="549.0" mnemonicParsing="false" onAction="#continueShopping" text="Continue shopping" />
-      <Label fx:id="thingAdded" layoutX="4.0" layoutY="170.0" prefHeight="30.0" prefWidth="599.0">
+      <Label fx:id="thingAdded" alignment="TOP_LEFT" layoutX="4.0" layoutY="170.0" prefHeight="121.0" prefWidth="599.0" textAlignment="JUSTIFY">
+
          <font>
             <Font size="19.0" />
          </font>

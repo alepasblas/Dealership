@@ -15,7 +15,7 @@
    <children>
       <Accordion>
         <panes>
-          <TitledPane animated="false" prefHeight="518.0" prefWidth="1021.0" text="Motorcycles">
+          <TitledPane animated="false" prefHeight="950.0" prefWidth="900.0" text="Motorcycles">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -29,7 +29,7 @@
                            <image>
                               <Image url="@../../../images/gasgasMC450.jpg" />
                            </image></ImageView>
-                        <ImageView fitHeight="240.0" fitWidth="433.0" layoutX="423.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="yamaha" fitHeight="240.0" fitWidth="433.0" layoutX="423.0" layoutY="115.0" onMouseClicked="#onYamahaClicked" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../../images/yamaha450.jpeg" />
                            </image></ImageView>

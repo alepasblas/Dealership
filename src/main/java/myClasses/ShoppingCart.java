@@ -59,9 +59,17 @@ public class ShoppingCart {
      */
     public static String SeeAllBikes() {
         String bikes="";
-        System.out.println("My bikes:");
         for (Motorcycle myBike : myBikes) {
-            bikes+=myBike+", ";
+            bikes+=myBike.name+" " + myBike.model +"\n";
+        }
+
+        return bikes;
+    }
+
+    public static String SeeAllPrices(){
+        String bikes="";
+        for (Motorcycle myBike : myBikes) {
+            bikes+=myBike.price+"\n";
         }
 
         return bikes;
