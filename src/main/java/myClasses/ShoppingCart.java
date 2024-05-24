@@ -66,19 +66,24 @@ public class ShoppingCart {
         return bikes;
     }
 
-    public static String SeeAllPrices(){
-        String bikes="";
+    public static List<Double> SeeAllPrices(){
+        List<Double> prices = new ArrayList<>();
         for (Motorcycle myBike : myBikes) {
-            bikes+=myBike.price+"\n";
-        }
+            prices.add(myBike.price);
 
-        return bikes;
+        }
+        for (Pieces myPieces : myPieces) {
+            prices.add(myPieces.price);
+
+        }
+        return prices;
     }
 
-    public static void SeeAllPieces(){
-        System.out.println("My pieces");
+    public static List<String> SeeAllPieces(){
+        List<String> pieces = new ArrayList<>();
         for (Pieces myPiece : myPieces) {
-            System.out.println(myPiece);
+            pieces.add(myPiece.name);
         }
+        return pieces;
     }
 }

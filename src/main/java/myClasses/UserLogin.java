@@ -7,7 +7,7 @@ import java.util.Objects;
  * It provides methods to check if the provided name and password match the stored credentials and to perform a login operation.
  */
 public class UserLogin {
-    String name; // The name of the user
+    static String name; // The name of the user
     String password; // The password associated with the user
 
     /**
@@ -26,7 +26,7 @@ public class UserLogin {
      *
      * @return The name of the user.
      */
-    public String getName() {
+    public static String getName() {
         return name;
     }
 
@@ -35,8 +35,8 @@ public class UserLogin {
      *
      * @param name The name to set.
      */
-    public void setName(String name) {
-        this.name = name;
+    public static void setName(String name) {
+        UserLogin.name = name;
     }
 
     /**

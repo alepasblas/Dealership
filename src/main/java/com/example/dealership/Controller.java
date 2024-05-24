@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import myClasses.UserLogin;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -35,9 +36,11 @@ public class Controller {
 
             for(int i=0; i< users.size(); i++)
             {
-                if(Objects.equals(users.get(i), user) && Objects.equals(passwords.get(i), password))
-                {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("princPage.fxml"));
+                if(Objects.equals(users.get(i), user) && Objects.equals(passwords.get(i), password)) {
+
+
+                    FXMLLoader loader =null;
+                    loader = new FXMLLoader(getClass().getResource("princPage.fxml"));
                     Parent root = loader.load();
 
 

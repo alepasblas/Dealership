@@ -37,8 +37,9 @@ public class Yamaha {
         com.example.dealership.ShoppingCart shoppingCartController = loader.getController();
 
         // Actualizar el texto en el ShoppingCart
-        shoppingCartController.setText(myClasses.ShoppingCart.SeeAllBikes());
+        shoppingCartController.setText(myClasses.ShoppingCart.SeeAllBikes() + myClasses.ShoppingCart.SeeAllPieces());
         shoppingCartController.setPrice(myClasses.ShoppingCart.SeeAllPrices());
+        shoppingCartController.setTotalPrice(myClasses.ShoppingCart.SeeAllPrices());
 
         // Mostrar la nueva escena
         Stage stage = (Stage) Button.getScene().getWindow();

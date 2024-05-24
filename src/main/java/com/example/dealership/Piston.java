@@ -8,15 +8,14 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import myClasses.Motorcycle;
 import myClasses.Pieces;
-import myClasses.ShoppingCart;
 
 import java.io.IOException;
 
-public class ControllerGasGas {
-    public javafx.scene.control.Button Button;
+public class Piston {
+    public Button Button;
+    public Button add;
 
     public void onbuttonClicked(ActionEvent actionEvent) throws IOException {
-
         FXMLLoader loader = new FXMLLoader(getClass().getResource("princPage.fxml"));
         Parent root = loader.load();
 
@@ -29,7 +28,8 @@ public class ControllerGasGas {
     }
 
     public void onAddClicked(ActionEvent actionEvent) throws IOException {
-        ShoppingCart.AddOneMoto(new Motorcycle("GasGas", "MC450", "This is a motocross bike", 12000, "4t Motorbike, very nice"));
+        double pistonPrice = 124.43; // Precio del pistón
+        myClasses.ShoppingCart.AddOnePiece(new Pieces("Piston", pistonPrice, "This is a piston for a bike engine"));
 
         // Cargar el controlador del ShoppingCart
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ShoppingCart.fxml"));
@@ -38,19 +38,13 @@ public class ControllerGasGas {
 
         // Actualizar el texto en el ShoppingCart
         shoppingCartController.setText(myClasses.ShoppingCart.SeeAllBikes() + myClasses.ShoppingCart.SeeAllPieces());
-        shoppingCartController.setPrice(ShoppingCart.SeeAllPrices());
-        shoppingCartController.setTotalPrice(ShoppingCart.SeeAllPrices());
+        shoppingCartController.setPrice(myClasses.ShoppingCart.SeeAllPrices());
+        shoppingCartController.setTotalPrice(myClasses.ShoppingCart.SeeAllPrices());
 
         // Mostrar la nueva escena
         Stage stage = (Stage) Button.getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
-
     }
-
 }
-
-
-
