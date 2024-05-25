@@ -19,7 +19,6 @@ public class ControllerOfPagPrinc {
     public MenuItem logOut;
     public ImageView sparkPlug;
     public ImageView piston;
-    public TextArea textReview;
     public TextField review;
     public Button post;
     public Label reviews;
@@ -120,4 +119,5 @@ public class ControllerOfPagPrinc {
         // Limpia el TextField review
         review.clear();
     }
+
 }

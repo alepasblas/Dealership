@@ -43,7 +43,7 @@
          </image>
       </ImageView>
       <Button fx:id="continueShopping" layoutX="244.0" layoutY="549.0" mnemonicParsing="false" onAction="#continueShopping" text="Continue shopping" />
-      <Label fx:id="thingAdded" alignment="TOP_LEFT" layoutX="4.0" layoutY="170.0" prefHeight="121.0" prefWidth="599.0" textAlignment="JUSTIFY">
+      <Label fx:id="thingAdded" alignment="TOP_LEFT" layoutX="7.0" layoutY="171.0" prefHeight="121.0" prefWidth="599.0" textAlignment="JUSTIFY">
 
          <font>
             <Font size="19.0" />
