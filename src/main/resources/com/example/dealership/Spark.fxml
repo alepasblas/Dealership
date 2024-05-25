@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dealership.Spark">
+   <children>
+      <ScrollPane layoutX="10.0" prefHeight="610.0" prefWidth="910.0">
+         <content>
+            <AnchorPane prefHeight="612.0" prefWidth="900.0">
+               <children>
+                  <ImageView fitHeight="263.0" fitWidth="396.0" layoutX="318.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/bujia.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="380.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spark Plug" textAlignment="CENTER">
+                     <font>
+                        <Font name="Dubai Medium" size="31.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="69.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Specifications:">
+                     <font>
+                        <Font name="Dubai Light" size="21.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="69.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NGK Iridium spark plugs currently represent the highest quality technical solution. They feature an iridium alloy on the centre electrode, which is welded on in a special process using a laser. The precious metal iridium is one of the hardest metals in the world. Its melting point is 2450 °C and is therefore particularly resistant to spark erosion. By using this metal, the service life is doubled on average compared to conventional spark plugs made of nickel" textAlignment="JUSTIFY" wrappingWidth="695.0" />
+                  <Button fx:id="Back" layoutX="17.0" layoutY="14.0" mnemonicParsing="false" onAction="#onBackClick" prefHeight="25.0" prefWidth="35.0" text="◀">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="824.0" layoutY="27.0" mnemonicParsing="false" onAction="#onAddSparkClicked" text="Add" />
+                  <TextArea layoutX="53.0" layoutY="609.0" prefHeight="200.0" prefWidth="770.0" />
+                  <Text layoutX="69.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments">
+                     <font>
+                        <Font name="Dubai Light" size="21.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

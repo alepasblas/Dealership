@@ -79,10 +79,11 @@ public class ShoppingCart {
         return prices;
     }
 
-    public static List<String> SeeAllPieces(){
-        List<String> pieces = new ArrayList<>();
-        for (Pieces myPiece : myPieces) {
-            pieces.add(myPiece.name);
+    public static String SeeAllPieces(){
+
+        String pieces="";
+        for (Pieces myPieces : myPieces) {
+            pieces+=myPieces.name +"\n";
         }
         return pieces;
     }

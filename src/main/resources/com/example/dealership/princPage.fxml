@@ -2,9 +2,11 @@
 
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -17,95 +19,130 @@
    <children>
       <AnchorPane prefHeight="600.0" prefWidth="900.0">
          <children>
-            <Accordion layoutY="46.0" prefHeight="562.0" prefWidth="900.0">
-              <panes>
-                <TitledPane animated="false" prefHeight="504.0" prefWidth="900.0" text="Motorcycles">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <Text layoutX="-1.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Motorcycles" textAlignment="CENTER" wrappingWidth="869.0">
-                                 <font>
-                                    <Font name="Dubai Medium" size="32.0" />
-                                 </font>
-                              </Text>
-                              <TextArea layoutX="12.0" layoutY="68.0" prefHeight="33.0" prefWidth="875.0" />
-                              <ImageView fx:id="gasgas" fitHeight="240.0" fitWidth="433.0" layoutX="48.0" layoutY="115.0" onMouseClicked="#onGasgasClicked" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../../images/gasgasMC450.jpg" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fx:id="yamaha" fitHeight="240.0" fitWidth="433.0" layoutX="423.0" layoutY="115.0" onMouseClicked="#onYamahaClicked" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../../images/yamaha450.jpeg" />
-                                 </image>
-                              </ImageView>
-                              <Text layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hacer funcional la busqueda" />
-                           </children>
-                        </AnchorPane>
-                  </content>
-                </TitledPane>
-                <TitledPane animated="false" prefHeight="730.0" prefWidth="516.0" text="Pieces">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="898.0">
-                           <children>
-                              <Text layoutX="-1.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pieces" textAlignment="CENTER" wrappingWidth="869.0">
-                                 <font>
-                                    <Font name="Dubai Medium" size="32.0" />
-                                 </font>
-                              </Text>
-                              <ImageView fx:id="sparkPlug" fitHeight="240.0" fitWidth="433.0" layoutX="106.0" layoutY="94.0" onMouseClicked="#onSparkClicked" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../../images/bujia.jpg" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fx:id="piston" fitHeight="240.0" fitWidth="433.0" layoutX="481.0" layoutY="94.0" onMouseClicked="#onPistonClicked" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../../images/piston4t.jpg" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </AnchorPane>
-                  </content>
-                </TitledPane>
-                <TitledPane animated="false" prefHeight="1224.0" prefWidth="900.0" text="About us">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <Text layoutX="-1.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About us" textAlignment="CENTER" wrappingWidth="869.0">
-                                 <font>
-                                    <Font name="Dubai Medium" size="32.0" />
-                                 </font>
-                              </Text>
-                              <Text layoutX="14.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We are a familiar dealership that we are in this job since 1967, we sell all types of motorcycles, motocross, road, mixed..." wrappingWidth="869.13671875" />
-                              <Text layoutX="13.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We are a dealer from bikers to bikers, we invite to you to check our app, and if you like some one, pick it and have fun!" wrappingWidth="872.13671875" />
-                              <ImageView fitHeight="274.0" fitWidth="272.0" layoutX="140.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../../images/concesionario.jpeg" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="272.0" fitWidth="401.0" layoutX="484.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../../images/conce2.jpeg" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </AnchorPane>
-                  </content>
-                </TitledPane>
-              </panes>
-            </Accordion>
-            <AnchorPane layoutY="550.0" prefHeight="68.0" prefWidth="900.0" />
-            <Button layoutX="847.0" mnemonicParsing="false" onAction="#onShoppingCart" prefHeight="46.0" prefWidth="53.0" text="🛒">
-               <font>
-                  <Font size="22.0" />
-               </font>
-            </Button>
-            <MenuButton layoutX="14.0" layoutY="11.0" mnemonicParsing="false" text="User" textAlignment="JUSTIFY">
-              <items>
-                <MenuItem mnemonicParsing="false" onAction="#onMyAccount" text="My Account" />
-                <MenuItem fx:id="logOut" mnemonicParsing="false" onAction="#onLogoutPressed" text="Log out" />
-              </items>
-            </MenuButton>
+            <ScrollPane prefHeight="600.0" prefWidth="900.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="900.0">
+                     <children>
+                        <Accordion layoutY="48.0" prefHeight="600.0" prefWidth="900.0">
+                          <panes>
+                            <TitledPane animated="false" prefHeight="504.0" prefWidth="900.0" text="Motorcycles">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="-1.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Motorcycles" textAlignment="CENTER" wrappingWidth="869.0">
+                                             <font>
+                                                <Font name="Dubai Medium" size="32.0" />
+                                             </font>
+                                          </Text>
+                                          <ImageView fx:id="gasgas" fitHeight="240.0" fitWidth="433.0" layoutX="48.0" layoutY="115.0" onMouseClicked="#onGasgasClicked" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/gasgasMC450.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="yamaha" fitHeight="240.0" fitWidth="433.0" layoutX="423.0" layoutY="115.0" onMouseClicked="#onYamahaClicked" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/yamaha450.jpeg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" prefHeight="730.0" prefWidth="516.0" text="Pieces">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="898.0">
+                                       <children>
+                                          <Text layoutX="-1.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pieces" textAlignment="CENTER" wrappingWidth="869.0">
+                                             <font>
+                                                <Font name="Dubai Medium" size="32.0" />
+                                             </font>
+                                          </Text>
+                                          <ImageView fx:id="sparkPlug" fitHeight="240.0" fitWidth="433.0" layoutX="106.0" layoutY="94.0" onMouseClicked="#onSparkClicked" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/bujia.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="piston" fitHeight="240.0" fitWidth="433.0" layoutX="481.0" layoutY="94.0" onMouseClicked="#onPistonClicked" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/piston4t.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                              <TitledPane animated="false" prefHeight="67.0" prefWidth="900.0" text="Post Your Review">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="-1.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We care about your opinion" textAlignment="CENTER" wrappingWidth="869.0">
+                                             <font>
+                                                <Font name="Dubai Medium" size="32.0" />
+                                             </font>
+                                          </Text>
+                                          <Text layoutX="37.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add your opinion of our shop!" wrappingWidth="207.13671875" />
+                                          <TextField fx:id="review" alignment="TOP_LEFT" layoutX="37.0" layoutY="151.0" prefHeight="119.0" prefWidth="794.0" />
+                                          <Button fx:id="post" layoutX="404.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#onPostClicked" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #009DCF;" text="Post" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" prefHeight="67.0" prefWidth="900.0" text="Reviews">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="-1.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reviews" textAlignment="CENTER" wrappingWidth="869.0">
+                                             <font>
+                                                <Font name="Dubai Medium" size="32.0" />
+                                             </font>
+                                          </Text>
+                                          <Label fx:id="reviews" alignment="TOP_LEFT" layoutX="27.0" layoutY="93.0" prefHeight="309.0" prefWidth="849.0" textAlignment="JUSTIFY" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                            <TitledPane animated="false" prefHeight="67.0" prefWidth="900.0" text="About us">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="-1.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About us" textAlignment="CENTER" wrappingWidth="869.0">
+                                             <font>
+                                                <Font name="Dubai Medium" size="32.0" />
+                                             </font>
+                                          </Text>
+                                          <Text layoutX="14.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We are a familiar dealership that we are in this job since 1967, we sell all types of motorcycles, motocross, road, mixed..." wrappingWidth="869.13671875" />
+                                          <Text layoutX="13.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We are a dealer from bikers to bikers, we invite to you to check our app, and if you like some one, pick it and have fun!" wrappingWidth="872.13671875" />
+                                          <ImageView fitHeight="274.0" fitWidth="272.0" layoutX="140.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/concesionario.jpeg" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="272.0" fitWidth="401.0" layoutX="484.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/conce2.jpeg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                        <MenuButton layoutX="14.0" layoutY="13.0" mnemonicParsing="false" text="User" textAlignment="JUSTIFY">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#onMyAccount" text="My Account" />
+                            <MenuItem fx:id="logOut" mnemonicParsing="false" onAction="#onLogoutPressed" text="Log out" />
+                          </items>
+                        </MenuButton>
+                        <Button layoutX="833.0" layoutY="2.0" mnemonicParsing="false" onAction="#onShoppingCart" prefHeight="46.0" prefWidth="53.0" text="🛒">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
          </children>
       </AnchorPane>
    </children>

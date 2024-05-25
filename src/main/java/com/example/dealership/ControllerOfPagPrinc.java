@@ -4,8 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -18,6 +19,11 @@ public class ControllerOfPagPrinc {
     public MenuItem logOut;
     public ImageView sparkPlug;
     public ImageView piston;
+    public TextArea textReview;
+    public TextField review;
+    public Button post;
+    public Label reviews;
+
 
     public void onGasgasClicked(MouseEvent mouseEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("GasGas.fxml"));
@@ -75,6 +81,12 @@ public class ControllerOfPagPrinc {
     }
 
     public void onSparkClicked(MouseEvent mouseEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Spark.fxml"));
+        Parent root = loader.load();
+        Stage stage = (Stage) gasgas.getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
 
     }
 
@@ -85,5 +97,27 @@ public class ControllerOfPagPrinc {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+
+
+    public void onPostClicked(MouseEvent mouseEvent) {
+        // Obtén el texto actual del Label reviews
+        String currentReviews = reviews.getText();
+
+        // Añade el nuevo texto del TextField review al texto actual
+        String newReview = review.getText();
+        if (!newReview.isEmpty()) {
+            if (!currentReviews.isEmpty()) {
+                currentReviews += "\n";
+            }
+            currentReviews += newReview;
+        }
+
+        // Establece el texto combinado en el Label reviews
+        reviews.setText(currentReviews);
+
+        // Limpia el TextField review
+        review.clear();
     }
 }
