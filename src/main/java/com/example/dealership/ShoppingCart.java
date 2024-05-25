@@ -54,10 +54,10 @@ public class ShoppingCart {
     }
 
 
-    // Método para agregar el precio de un artículo al carrito
+    // Method to add the total price
     public void addPrice(double price) {
         totalPrices += price;
-        totalPrice.setText(String.format("%.2f", totalPrices)); // Actualizar la etiqueta del precio total
+        totalPrice.setText(String.format("%.2f", totalPrices)); // We update the total price label
     }
 
 }

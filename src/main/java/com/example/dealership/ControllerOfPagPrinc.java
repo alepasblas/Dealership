@@ -6,11 +6,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ControllerOfPagPrinc {
@@ -21,8 +23,9 @@ public class ControllerOfPagPrinc {
     public ImageView piston;
     public TextField review;
     public Button post;
-    public Label reviews;
+    public VBox reviewsBox;
 
+    private List<ReviewEntry> reviewEntries = new ArrayList<>();
 
     public void onGasgasClicked(MouseEvent mouseEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("GasGas.fxml"));
@@ -41,7 +44,7 @@ public class ControllerOfPagPrinc {
         String bikesText = myClasses.ShoppingCart.SeeAllBikes();
         List<Double> prices = myClasses.ShoppingCart.SeeAllPrices();
 
-        // Actualizar el texto en el ShoppingCart
+        // Update the shopping cart text
         shoppingCartController.setText(myClasses.ShoppingCart.SeeAllBikes() + myClasses.ShoppingCart.SeeAllPieces());
         shoppingCartController.setPrice(myClasses.ShoppingCart.SeeAllPrices());
         shoppingCartController.setTotalPrice(myClasses.ShoppingCart.SeeAllPrices());
@@ -98,26 +101,48 @@ public class ControllerOfPagPrinc {
         stage.show();
     }
 
-
-
     public void onPostClicked(MouseEvent mouseEvent) {
-        // Obtén el texto actual del Label reviews
-        String currentReviews = reviews.getText();
-
-        // Añade el nuevo texto del TextField review al texto actual
         String newReview = review.getText();
         if (!newReview.isEmpty()) {
-            if (!currentReviews.isEmpty()) {
-                currentReviews += "\n";
-            }
-            currentReviews += newReview;
+            // Create a Label for the review
+            Label reviewLabel = new Label(newReview);
+            // Create a delete button next to the Label
+            Button deleteButton = new Button("Delete");
+            Button editButton = new Button("Edit");
+
+            deleteButton.setOnAction(e -> {
+                reviewsBox.getChildren().remove(reviewLabel);
+                reviewsBox.getChildren().remove(deleteButton);
+                reviewsBox.getChildren().remove(editButton);
+                reviewEntries.removeIf(entry -> entry.label == reviewLabel);
+            });
+
+            editButton.setOnAction(e -> {
+                review.setText(reviewLabel.getText());
+                reviewEntries.removeIf(entry -> entry.label == reviewLabel);
+                reviewsBox.getChildren().remove(reviewLabel);
+                reviewsBox.getChildren().remove(deleteButton);
+                reviewsBox.getChildren().remove(editButton);
+            });
+
+            // Add the Label and buttons to the VBox
+            reviewsBox.getChildren().addAll(reviewLabel, deleteButton, editButton);
+            reviewEntries.add(new ReviewEntry(reviewLabel, deleteButton, editButton));
+
+            review.clear();
         }
-
-        // Establece el texto combinado en el Label reviews
-        reviews.setText(currentReviews);
-
-        // Limpia el TextField review
-        review.clear();
     }
 
+
+    private static class ReviewEntry {
+        Label label;
+        Button deleteButton;
+        Button editButton;
+
+        ReviewEntry(Label label, Button deleteButton, Button editButton) {
+            this.label = label;
+            this.deleteButton = deleteButton;
+            this.editButton = editButton;
+        }
+    }
 }
