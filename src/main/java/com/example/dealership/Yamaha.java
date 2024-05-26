@@ -31,12 +31,10 @@ public class Yamaha {
     public void onAddClicked(ActionEvent actionEvent) throws IOException {
         myClasses.ShoppingCart.AddOneMoto(new Motorcycle("Yamaha", "YZ450", "This is a motocross bike", 10450, "4t Motorbike, a Japanese bike"));
 
-        // Cargar el controlador del ShoppingCart
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ShoppingCart.fxml"));
         Parent root = loader.load();
         com.example.dealership.ShoppingCart shoppingCartController = loader.getController();
 
-        // Actualizar el texto en el ShoppingCart
         shoppingCartController.setText(myClasses.ShoppingCart.SeeAllBikes() + myClasses.ShoppingCart.SeeAllPieces());
         shoppingCartController.setPrice(myClasses.ShoppingCart.SeeAllPrices());
         shoppingCartController.setTotalPrice(myClasses.ShoppingCart.SeeAllPrices());

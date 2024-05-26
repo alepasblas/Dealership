@@ -5,7 +5,8 @@ import java.util.List;
 
 /**
  * The ShoppingCart class represents a shopping cart that can hold pieces and motorcycles.
- * It provides methods to add and remove pieces and motorcycles from the cart, as well as to view the contents of the cart.
+ * It provides methods to add and remove pieces and motorcycles from the cart,
+ * as well as to view the contents of the cart.
  */
 public class ShoppingCart {
 
@@ -37,7 +38,6 @@ public class ShoppingCart {
      * @return true if the piece is successfully removed from the cart, false otherwise.
      */
     public static boolean RemoveOnePiece(Pieces pieces) {
-
         myPieces.remove(pieces);
         return true;
     }
@@ -54,36 +54,43 @@ public class ShoppingCart {
     }
 
     /**
-     * Displays all items in the shopping cart.
-     * Prints out all motorcycles and pieces currently in the cart.
+     * Displays all motorcycles in the shopping cart.
+     *
+     * @return A string containing the names and models of all motorcycles in the cart.
      */
     public static String SeeAllBikes() {
-        String bikes="";
+        String bikes = "";
         for (Motorcycle myBike : myBikes) {
-            bikes+=myBike.name+" " + myBike.model +"\n";
+            bikes += myBike.name + " " + myBike.model + "\n";
         }
-
         return bikes;
     }
 
-    public static List<Double> SeeAllPrices(){
+    /**
+     * Displays all prices of items in the shopping cart.
+     *
+     * @return A list containing the prices of all motorcycles and pieces in the cart.
+     */
+    public static List<Double> SeeAllPrices() {
         List<Double> prices = new ArrayList<>();
         for (Motorcycle myBike : myBikes) {
             prices.add(myBike.price);
-
         }
         for (Pieces myPieces : myPieces) {
             prices.add(myPieces.price);
-
         }
         return prices;
     }
 
-    public static String SeeAllPieces(){
-
-        String pieces="";
+    /**
+     * Displays all pieces in the shopping cart.
+     *
+     * @return A string containing the names of all pieces in the cart.
+     */
+    public static String SeeAllPieces() {
+        String pieces = "";
         for (Pieces myPieces : myPieces) {
-            pieces+=myPieces.name +"\n";
+            pieces += myPieces.name + "\n";
         }
         return pieces;
     }

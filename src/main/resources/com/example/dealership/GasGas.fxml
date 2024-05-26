@@ -13,7 +13,7 @@
    <children>
       <ScrollPane prefHeight="600.0" prefWidth="900.0">
          <content>
-            <AnchorPane prefHeight="612.0" prefWidth="900.0">
+            <AnchorPane prefHeight="612.0" prefWidth="900.0" style="-fx-background-color: #e0fbfc;">
                <children>
                   <!-- Aquí están todos los demás nodos -->
                   <ImageView fitHeight="263.0" fitWidth="396.0" layoutX="258.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">

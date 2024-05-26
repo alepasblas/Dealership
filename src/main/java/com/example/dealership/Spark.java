@@ -27,20 +27,17 @@ public class Spark {
     }
 
     public void onAddSparkClicked(ActionEvent actionEvent) throws IOException {
-        double sparkPrice = 24.23; // Precio de la bujia
+        double sparkPrice = 24.23;
         myClasses.ShoppingCart.AddOnePiece(new Pieces("NGK Spark Plug", sparkPrice, "This is a spark plug for competition bikes"));
 
-        // Cargar el controlador del ShoppingCart
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ShoppingCart.fxml"));
         Parent root = loader.load();
         com.example.dealership.ShoppingCart shoppingCartController = loader.getController();
 
-        // Actualizar el texto en el ShoppingCart
         shoppingCartController.setText(myClasses.ShoppingCart.SeeAllBikes() + myClasses.ShoppingCart.SeeAllPieces());
         shoppingCartController.setPrice(myClasses.ShoppingCart.SeeAllPrices());
         shoppingCartController.setTotalPrice(myClasses.ShoppingCart.SeeAllPrices());
 
-        // Mostrar la nueva escena
         Stage stage = (Stage) Back.getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

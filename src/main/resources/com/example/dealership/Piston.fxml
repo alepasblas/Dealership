@@ -9,64 +9,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dealership.Piston">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #e0fbfc;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dealership.Piston">
    <children>
-      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0">
-         <children>
-            <ScrollPane prefHeight="600.0" prefWidth="900.0">
-               <content>
-                  <AnchorPane prefHeight="612.0" prefWidth="900.0">
-                     <children>
-                        <ImageView fitHeight="258.0" fitWidth="491.0" layoutX="221.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../images/yamaha450.jpeg" />
-                           </image>
-                        </ImageView>
-                        <Text layoutX="348.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yamaha YZ 450" textAlignment="CENTER">
-                           <font>
-                              <Font name="Dubai Medium" size="31.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="69.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Specifications:">
-                           <font>
-                              <Font name="Dubai Light" size="21.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="69.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The culmination of 50 years of MX innovation, the new YZ450F 50th Anniversary Edition represents the pinnacle of offroad four-stroke technology wrapped in iconic YZ heritage livery." textAlignment="JUSTIFY" wrappingWidth="695.0" />
-                        <Text layoutX="69.0" layoutY="579.0" strokeType="OUTSIDE" strokeWidth="0.0" text="POWERFUL 450CC FOUR-STROKE ENGINE:  Featuring a reversed cylinder head layout, forged aluminum piston, 39 mm titanium valves, lightened crank assembly and dry sump lubrication, the 2024 YZ450F's advanced DOHC four-stroke engine is light, compact and world renowned for its incredibly broad pulling power across the entire rev range." textAlignment="JUSTIFY" wrappingWidth="695.0" />
-                        <Text layoutX="69.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Engine:">
-                           <font>
-                              <Font name="Dubai Light" size="21.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="66.0" layoutY="663.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chassis:">
-                           <font>
-                              <Font name="Dubai Light" size="21.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="66.0" layoutY="700.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADVANCED ALUMINUM BILATERAL BEAM FRAME:  The precisely tuned aluminum bilateral beam frame provides just the right amount of strength and flex for the perfect balance of stability and cornering performance. The result is a better handling machine with lighter feel, more agility and increased traction allowing the rider to enter corners with greater confidence and more line choices." textAlignment="JUSTIFY" wrappingWidth="695.0" />
-                        <Button fx:id="Button" layoutX="17.0" layoutY="14.0" mnemonicParsing="false" onAction="#onbuttonClicked" prefHeight="25.0" prefWidth="35.0" text="◀">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="add" layoutX="824.0" layoutY="27.0" mnemonicParsing="false" onAction="#onAddClicked" text="Add" />
-                        <TextArea layoutX="65.0" layoutY="798.0" prefHeight="200.0" prefWidth="770.0" />
-                        <Text layoutX="66.0" layoutY="786.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comments">
-                           <font>
-                              <Font name="Dubai Light" size="21.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </AnchorPane>
-               </content>
-            </ScrollPane>
-         </children>
-      </AnchorPane>
-      <ScrollPane layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="900.0">
+      <ScrollPane layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #e0fbfc;">
          <content>
-            <AnchorPane prefHeight="612.0" prefWidth="900.0">
+            <AnchorPane prefHeight="612.0" prefWidth="900.0" style="-fx-background-color: #e0fbfc;">
                <children>
                   <ImageView fitHeight="258.0" fitWidth="491.0" layoutX="259.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
                      <image>

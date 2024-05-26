@@ -28,20 +28,19 @@ public class Piston {
     }
 
     public void onAddClicked(ActionEvent actionEvent) throws IOException {
-        double pistonPrice = 124.43; // Precio del pistón
+        double pistonPrice = 124.43;
         myClasses.ShoppingCart.AddOnePiece(new Pieces("Piston", pistonPrice, "This is a piston for a bike engine"));
 
-        // Cargar el controlador del ShoppingCart
+        // Charge the shopping cart controller
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ShoppingCart.fxml"));
         Parent root = loader.load();
         com.example.dealership.ShoppingCart shoppingCartController = loader.getController();
 
-        // Actualizar el texto en el ShoppingCart
+        //Update the text
         shoppingCartController.setText(myClasses.ShoppingCart.SeeAllBikes() + myClasses.ShoppingCart.SeeAllPieces());
         shoppingCartController.setPrice(myClasses.ShoppingCart.SeeAllPrices());
         shoppingCartController.setTotalPrice(myClasses.ShoppingCart.SeeAllPrices());
 
-        // Mostrar la nueva escena
         Stage stage = (Stage) Button.getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

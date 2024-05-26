@@ -13,20 +13,22 @@ import java.io.IOException;
 public class MyAccount {
     @FXML
     private Label name;
-
+/*
     private String username;
 
-    public void setUser(String username) {
-        this.username = username;
-        name.setText("Welcome, " + username);
+    public void setUser(String user) {
+        this.username = user;
+        if (name != null) {
+            name.setText("Welcome, " + user);
+        }
     }
+
 
     @FXML
     public void onMyAccount() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("MyAccount.fxml"));
             Parent root = loader.load();
-
 
             MyAccount myAccountController = loader.getController();
             myAccountController.setUser(username);
@@ -39,15 +41,13 @@ public class MyAccount {
             e.printStackTrace();
         }
     }
-
+*/
     public void logOutPressed(ActionEvent actionEvent) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("LogIn.fxml"));
         Parent root = loader.load();
 
         Stage stage = (Stage) name.getScene().getWindow();
-
         Scene scene = new Scene(root);
-
         stage.setScene(scene);
         stage.show();
     }

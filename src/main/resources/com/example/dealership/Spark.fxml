@@ -9,12 +9,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dealership.Spark">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #e0fbfc;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dealership.Spark">
    <children>
       <ScrollPane layoutX="10.0" prefHeight="610.0" prefWidth="910.0">
          <content>
-            <AnchorPane prefHeight="612.0" prefWidth="900.0">
+            <AnchorPane prefHeight="612.0" prefWidth="900.0" style="-fx-background-color: #e0fbfc;">
                <children>
                   <ImageView fitHeight="263.0" fitWidth="396.0" layoutX="318.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
                      <image>

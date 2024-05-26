@@ -54,7 +54,7 @@ public class Controller {
             }
 
         } catch (IOException e) {
-            e.printStackTrace(); // Manejar cualquier error de carga de FXML
+            e.printStackTrace();
         }
     }
 
@@ -64,7 +64,7 @@ public class Controller {
             String user = UserRegister.getText();
             String password= PasswordRegister.getText();
 
-            FileWriter users = new FileWriter("src/main/resources/File/Users.txt", true);
+            FileWriter users = new FileWriter("src/main/resources/Files/Users.txt", true);
 
             BufferedWriter usersU = new BufferedWriter(users);
 

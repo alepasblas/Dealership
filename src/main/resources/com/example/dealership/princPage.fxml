@@ -16,17 +16,17 @@
 
 <VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dealership.ControllerOfPagPrinc">
     <children>
-        <AnchorPane prefHeight="600.0" prefWidth="900.0">
+        <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #98c1d9;">
             <children>
-                <ScrollPane prefHeight="600.0" prefWidth="900.0">
+                <ScrollPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #98c1d9;">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="900.0">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #98c1d9;">
                             <children>
-                                <Accordion layoutY="48.0" prefHeight="600.0" prefWidth="900.0">
+                                <Accordion layoutY="48.0" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #3d5a80;">
                                     <panes>
-                                        <TitledPane animated="false" prefHeight="504.0" prefWidth="900.0" text="Motorcycles">
+                                        <TitledPane animated="false" prefHeight="504.0" prefWidth="900.0" style="-fx-background-color: #e0fbfc;" text="Motorcycles">
                                             <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #e0fbfc;">
                                                     <children>
                                                         <Text layoutX="-1.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Motorcycles" textAlignment="CENTER" wrappingWidth="869.0">
                                                             <font>
@@ -49,7 +49,7 @@
                                         </TitledPane>
                                         <TitledPane animated="false" prefHeight="730.0" prefWidth="516.0" text="Pieces">
                                             <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="898.0">
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="471.0" prefWidth="898.0" style="-fx-background-color: #e0fbfc;">
                                                     <children>
                                                         <Text layoutX="-1.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pieces" textAlignment="CENTER" wrappingWidth="869.0">
                                                             <font>
@@ -72,7 +72,7 @@
                                         </TitledPane>
                                         <TitledPane animated="false" prefHeight="67.0" prefWidth="900.0" text="Post Your Review">
                                             <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #e0fbfc;">
                                                     <children>
                                                         <Text layoutX="-1.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We care about your opinion" textAlignment="CENTER" wrappingWidth="869.0">
                                                             <font>
@@ -88,7 +88,7 @@
                                         </TitledPane>
                                         <TitledPane animated="false" prefHeight="67.0" prefWidth="900.0" text="Reviews">
                                             <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #e0fbfc;">
                                                     <children>
                                                         <Text layoutX="-1.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reviews" textAlignment="CENTER" wrappingWidth="869.0">
                                                             <font>
@@ -102,7 +102,7 @@
                                         </TitledPane>
                                         <TitledPane animated="false" prefHeight="67.0" prefWidth="900.0" text="About us">
                                             <content>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #e0fbfc;">
                                                     <children>
                                                         <Text layoutX="-1.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About us" textAlignment="CENTER" wrappingWidth="869.0">
                                                             <font>
@@ -127,13 +127,13 @@
                                         </TitledPane>
                                     </panes>
                                 </Accordion>
-                                <MenuButton layoutX="14.0" layoutY="13.0" mnemonicParsing="false" text="User" textAlignment="JUSTIFY">
+                                <MenuButton layoutX="14.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: #e0fbfc;" text="User" textAlignment="JUSTIFY">
                                     <items>
                                         <MenuItem mnemonicParsing="false" onAction="#onMyAccount" text="My Account" />
                                         <MenuItem fx:id="logOut" mnemonicParsing="false" onAction="#onLogoutPressed" text="Log out" />
                                     </items>
                                 </MenuButton>
-                                <Button layoutX="833.0" layoutY="2.0" mnemonicParsing="false" onAction="#onShoppingCart" prefHeight="46.0" prefWidth="53.0" text="🛒">
+                                <Button layoutX="833.0" layoutY="2.0" mnemonicParsing="false" onAction="#onShoppingCart" prefHeight="46.0" prefWidth="53.0" style="-fx-background-color: #e0fbfc;" text="🛒">
                                     <font>
                                         <Font size="22.0" />
                                     </font>

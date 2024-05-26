@@ -10,12 +10,12 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dealership.MyAccount">
    <children>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="375.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="375.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/person.png" />
          </image>
       </ImageView>
-      <Text layoutX="405.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Name:">
+      <Text layoutX="406.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome!">
          <font>
             <Font size="20.0" />
          </font>

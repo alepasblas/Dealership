@@ -41,8 +41,6 @@ public class ControllerOfPagPrinc {
         Parent root = loader.load();
         com.example.dealership.ShoppingCart shoppingCartController = loader.getController();
 
-        String bikesText = myClasses.ShoppingCart.SeeAllBikes();
-        List<Double> prices = myClasses.ShoppingCart.SeeAllPrices();
 
         // Update the shopping cart text
         shoppingCartController.setText(myClasses.ShoppingCart.SeeAllBikes() + myClasses.ShoppingCart.SeeAllPieces());
