@@ -31,17 +31,14 @@ public class ControllerGasGas {
     public void onAddClicked(ActionEvent actionEvent) throws IOException {
         ShoppingCart.AddOneMoto(new Motorcycle("GasGas", "MC450", "This is a motocross bike", 12000, "4t Motorbike, very nice"));
 
-        // Cargar el controlador del ShoppingCart
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ShoppingCart.fxml"));
         Parent root = loader.load();
         com.example.dealership.ShoppingCart shoppingCartController = loader.getController();
 
-        // Actualizar el texto en el ShoppingCart
         shoppingCartController.setText(myClasses.ShoppingCart.SeeAllBikes() + myClasses.ShoppingCart.SeeAllPieces());
         shoppingCartController.setPrice(ShoppingCart.SeeAllPrices());
         shoppingCartController.setTotalPrice(ShoppingCart.SeeAllPrices());
 
-        // Mostrar la nueva escena
         Stage stage = (Stage) Button.getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);

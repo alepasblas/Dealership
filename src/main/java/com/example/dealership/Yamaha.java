@@ -39,7 +39,6 @@ public class Yamaha {
         shoppingCartController.setPrice(myClasses.ShoppingCart.SeeAllPrices());
         shoppingCartController.setTotalPrice(myClasses.ShoppingCart.SeeAllPrices());
 
-        // Mostrar la nueva escena
         Stage stage = (Stage) Button.getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
